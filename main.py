@@ -7,11 +7,14 @@ from pydantic import BaseModel
 from typing import Optional
 from pymongo import MongoClient
 from bson import ObjectId
+from dotenv import load_dotenv
+import os
 
 # -----------------------------------------------------------------
 # Conexión a MongoDB
 # -----------------------------------------------------------------
-client = MongoClient("mongodb+srv://alanvasquezsa:5g6Pjwk8vJ0rvGYZ@mascotas.wtytthn.mongodb.net/")
+load_dotenv() # Cargar variables desde el archivo .env
+client = MongoClient(os.getenv("MONGO_URI"))
 db = client["MascotasDB"]
 
 # Colecciones
