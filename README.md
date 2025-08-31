@@ -40,22 +40,30 @@ cd <NOMBRE_DEL_REPOSITORIO>
 
 2. Crea un entorno virtual y actívalo:
 
+```
 python -m venv env
 source env/bin/activate  # En Windows usa `env\Scripts\activate`
+```
 
 3. Instala las dependencias:
 
+```
 pip install requirements.txt
+```
 
 4. Asegúrate de que MongoDB esté en ejecución. Puedes iniciar MongoDB con el siguiente comando:
 
+```
 mongod
+```
 
 ## Ejecución
 
 Para ejecutar la aplicación, utiliza el siguiente comando:
 
+```
 uvicorn main:app --reload --port 3000
+```
 
 ## Endpoints
 
