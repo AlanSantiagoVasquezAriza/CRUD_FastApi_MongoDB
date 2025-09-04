@@ -4,10 +4,11 @@ from bson import ObjectId
 from models.mascota import MascotaCreate, MascotaUpdate
 from database.db import dueños_collection, mascotas_collection, serialize_doc
 from openai import OpenAI
+import os
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key=os.getenv("OPENAI_API_KEY"),
 )
 
 router = APIRouter()
